@@ -7,14 +7,51 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 	</head>
 	<body>
+
 		<div id="todo">
-			
+
+			<label v-for="label in options">
+				<input type="radio"
+							 v-model="current"
+							 :value="label.value">{{ label.label }}
+			</label>
+
+			（{{ computedTodos.length }} 件を表示）
+
+			<table>
+
+				<thead>
+					<tr>
+						<th class="id">ID</th>
+						<th class="comment">TODO</th>
+						<th class="state">STATE</th>
+						<th class="button">DELETE</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr v-for="item in computedTodos" :key="item.id">
+						<th>{{ item.id }}</th>
+						<td>{{ item.comment }}</td>
+						<td class="state">
+							<button @click="doChangeState(item)">
+								{{ labels[item.state] }}
+							</button>
+						</td>
+						<td class="button" @click="doRemove(item)">
+							<button>削除</button>
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+			<h2>新しい作業の追加</h2>
+			<form class="add-form" @submit.prevent="doAdd">
+				ToDo<input type="text" ref="comment">
+				<button type="submit">追加</button>
+			</form>
 		</div>
-
-
-
-
-
 
 	<script src="main.js"></script>
 	</body>
