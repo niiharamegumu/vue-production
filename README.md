@@ -1,6 +1,6 @@
 # vue-production
-Create a simple application using _Vue.js_.
+Create a simple application using __Vue.js__.
 
 ___
-## todoList
+## [todoList](https://jp.vuejs.org/v2/examples/todomvc.html)
 Make todo list with practice.
