@@ -53,7 +53,7 @@ var todo = new Vue({
 		this.todos = todoStorage.fetch();
 	},
 	methods: {
-		doAdd: function(event, value){
+		doAdd: function(){
 			var comment = this.$refs.comment;
 			if(!comment.value.length){
 				return;
