@@ -55,13 +55,19 @@ var todo = new Vue({
 	methods: {
 		doAdd: function(){
 			var comment = this.$refs.comment;
+			var date = new Date();
+			var nowMonth = date.getMonth() + 1;
+			var nowDate = date.getDate();
+
 			if(!comment.value.length){
 				return;
 			}
+
 			this.todos.push({
 				id: todoStorage.uid++,
 				comment: comment.value,
-				state: 0
+				state: 0,
+				date: nowMonth + '/' + nowDate
 			});
 			comment.value = '';
 		},

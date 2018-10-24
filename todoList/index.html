@@ -23,6 +23,7 @@
 				<thead>
 					<tr>
 						<th class="id">ID</th>
+						<th class="date">DATE</th>
 						<th class="comment">TODO</th>
 						<th class="state">STATE</th>
 						<th class="button">DELETE</th>
@@ -32,6 +33,7 @@
 				<tbody>
 					<tr v-for="item in computedTodos" :key="item.id">
 						<th>{{ item.id }}</th>
+						<td>{{ item.date }}</td>
 						<td>{{ item.comment }}</td>
 						<td class="state">
 							<button @click="doChangeState(item)">

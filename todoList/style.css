@@ -21,22 +21,31 @@ th {
   padding: 0 8px;
   line-height: 40px;
 }
-thead th.id {
+.id {
   width: 50px;
 }
-thead th.state {
+.date {
+	width: 50px;
+}
+.state {
   width: 100px;
 }
-thead th.button {
+.button {
   width: 60px;
 }
-tbody td.button, tbody td.state {
-  text-align: center;
+.button,
+.state,
+.date {
+	text-align: center;
 }
 tbody tr td,
 tbody tr th {
   border-bottom: 1px solid #ccc;
   transition: all 0.4s;
+}
+tbody tr td:first-of-type {
+	font-weight: bold;
+	text-align: center;
 }
 tbody tr.done td,
 tbody tr.done th {
