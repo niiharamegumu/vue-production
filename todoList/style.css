@@ -69,3 +69,6 @@ button {
 	color: #fff;
 	cursor: pointer;
 }
+input[type="text"] {
+	width: 400px;
+}
