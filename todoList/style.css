@@ -38,6 +38,10 @@ th {
 .date {
 	text-align: center;
 }
+.add-icon {
+	color: #0099e4;
+	margin: 0 6px;
+}
 tbody tr td,
 tbody tr th {
 	border-bottom: 1px solid #ccc;
